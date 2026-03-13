@@ -63,6 +63,3 @@ for (const file of files) {
 
     console.log("Файл проверен " + file);
 }
-
-
-//
