@@ -33,6 +33,3 @@ const cookDinner = async () => {
 
 cookDinner();
 
-
-// task 3.
-
