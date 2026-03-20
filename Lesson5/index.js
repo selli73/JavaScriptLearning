@@ -105,9 +105,11 @@
 // функция -  получение данных
 // пример: Вытащить данные с стороннего сервиса
 const getData = async () => {
-    const data = request("https://youtube.com/video/12312334241");  // views, likes, comments
-    data.views
+    const data = await fetch("https://gusic.xyz/stats");  // servers, users
+    console.log(await data.json());
 };
+
+getData();
 
 
 
