@@ -53,12 +53,23 @@
 
 
 // ms - миллисекунды
-// const delay = (ms) => {
-//     // Создаем новый экземпляр класса Promise
-//     // Возвращаем Promise
-//     // он принимает функцию resolve, которую мы должны вернуть
-//     return new Promise((resolve) => setTimeout(() => resolve(), ms));
-// }
+const delay = async (ms) => {
+    // Создаем новый экземпляр класса Promise
+    // Возвращаем Promise
+    // он принимает функцию resolve, которую мы должны вернуть
+    return new Promise((resolve) => {
+
+      setTimeout(() => resolve("Done"), ms);
+    }
+    );
+}
+
+//console.log(await delay(2000));
+delay(2000).then(
+   result => console.log(result),
+   error => console.log(error)
+);
+
 
 // const uploadFile = async (name, size) => {
 //     console.log(`Начали загрузку файла ${name} (${size}) MB`);
@@ -104,12 +115,12 @@
 
 // функция -  получение данных
 // пример: Вытащить данные с стороннего сервиса
-const getData = async () => {
-    const data = await fetch("https://gusic.xyz/stats");  // servers, users
-    console.log(await data.json());
-};
+// const getData = async () => {
+//     const data = await fetch("https://gusic.xyz/stats");  // servers, users
+//     console.log(await data.json());
+// };
 
-getData();
+// getData();
 
 
 
