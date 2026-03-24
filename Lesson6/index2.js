@@ -9,7 +9,7 @@ const server = http.createServer( async (request, response) => {
     if (request.url === "/") {
         response.statusCode = 200;
         response.write("Главная страница сайта");
-        response.end;
+        response.end();
     } else if (request.url === '/about') {
         response.statusCode = 200;
         response.write("Это стартовая страница нашего файлообменника");
